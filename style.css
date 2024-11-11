@@ -154,6 +154,21 @@ footer p {
   margin: 0;
 }
 
+/* Container for all images */
+.image-container {
+  display: flex; /* Lays out child elements in a row */
+  justify-content: center; /* Centers images horizontally */
+  gap: 20px; /* Adds space between each image */
+  flex-wrap: wrap; /* Wraps images to a new row if screen is too small */
+}
+
+/* Individual image styling */
+.image-item img {
+  max-width: 100%; /* Makes images responsive */
+  height: auto; /* Maintains image aspect ratio */
+  border-radius: 10px; /* Optional: rounds corners */
+}
+
 /* Global Styles */
 body {
   background-image: url("images/julian-hochgesang-7SV4cz3UFEI-unsplash.jpg");
