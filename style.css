@@ -1,22 +1,164 @@
+/* Set the background image to cover the entire page */
+body {
+  background-image: url("images/julian-hochgesang-7SV4cz3UFEI-unsplash.jpg");
+  background-size: cover; /* Ensures the background image covers the entire page */
+  background-position: center center; /* Centers the image */
+  background-attachment: fixed; /* Keeps the image fixed when scrolling */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ensures the background covers the full height of the viewport */
+  color: white; /* Ensures the text color is white for readability */
+  font-family: "Pacifico", sans-serif; /* Uses the Pacifico font globally */
+}
+
+/* Remove background color from h1 and add an ombre effect on the text */
+h1 {
+  font-family: "Pacifico", sans-serif;
+  text-align: center;
+  font-size: 5rem; /* Adjust size as needed */
+  background: linear-gradient(
+    to right,
+    #fb6124,
+    #f637a6,
+    rgb(10, 214, 214),
+    rgba(66, 0, 66, 0.555)
+  ); /* Ombre effect using gradient */
+  -webkit-background-clip: text; /* Ensures the gradient applies to the text */
+  color: transparent; /* Makes the text color transparent to show the gradient */
+  padding: 20px;
+  margin: 0;
+}
+
+p {
+  font-family: "Pacifico", sans-serif;
+  text-align: center;
+  font-size: x-large; /* Adjust size as needed */
+  color: rgb(10, 228, 228); /* Ombre effect using gradient */
+  -webkit-background-clip: text; /* Ensures the gradient applies to the text */
+  padding: 20px;
+  margin: 0;
+}
+
+section > article {
+  font-family: "Pacifico", sans-serif;
+  text-align: center;
+  font-size: x-large; /* Adjust size as needed */
+  color: rgb(45, 1, 55); /* Ombre effect using gradient */
+  -webkit-background-clip: text; /* Ensures the gradient applies to the text */
+  padding: 20px;
+  margin: 0;
+}
+
+h3 {
+  font-family: "Pacifico", sans-serif;
+  text-align: center;
+  font-size: x-large; /* Adjust size as needed */
+  color: rgb(10, 228, 228); /* Ombre effect using gradient */
+  -webkit-background-clip: text; /* Ensures the gradient applies to the text */
+  padding: 20px;
+  margin: 0;
+}
+
+ul {
+  list-style-type: none; /* Removes the dots */
+  padding: 0; /* Optional: Removes default padding */
+  margin: 0; /* Optional: Removes default margin */
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: transparent; /* Removes the brown background, makes it transparent */
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+/* Navbar Button Styles */
+.navbar .button {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 0 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar .button:hover {
+  background-color: #ffa500; /* Hover effect with orange */
+}
+
+/* Programs Section */
+.programs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.programs-grid .program {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 30%;
+  margin: 10px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.programs-grid .program h2 {
+  font-family: "Pacifico", sans-serif;
+  text-align: center;
+  font-size: 2rem; /* Adjust the size as needed */
+  background: linear-gradient(
+    to right,
+    #fb6124,
+    #f637a6,
+    rgb(10, 214, 214),
+    rgba(66, 0, 66, 0.555)
+  ); /* Gradient as specified */
+  -webkit-background-clip: text; /* Ensures the gradient applies to the text */
+  color: transparent; /* Makes the text color transparent to show the gradient */
+  padding: 10px;
+  margin: 0;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Get Involved Form Styles */
+form {
+  text-align: center;
+  margin: 40px 0;
+}
+
+form select,
+form button {
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+/* Footer Styles */
+footer {
+  background-color: transparent; /* Removes the brown background, makes it transparent */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Global Styles */
 body {
   background-image: url("images/julian-hochgesang-7SV4cz3UFEI-unsplash.jpg");
   background-size: cover; /* This makes the image cover the entire page */
   background-repeat: no-repeat; /* Prevents the image from repeating */
   background-attachment: fixed; /* Makes the background stay fixed when you scroll */
   background-position: center; /* Centers the image */
-}
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.3
-  ); /* This adds a semi-transparent black overlay */
-  z-index: -1; /* Ensures the overlay is behind other content */
 }
