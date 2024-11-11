@@ -43,7 +43,7 @@ section > article {
   font-family: "Pacifico", sans-serif;
   text-align: center;
   font-size: x-large; /* Adjust size as needed */
-  color: rgb(45, 1, 55); /* Ombre effect using gradient */
+  color: rgb(10, 228, 228);
   -webkit-background-clip: text; /* Ensures the gradient applies to the text */
   padding: 20px;
   margin: 0;
