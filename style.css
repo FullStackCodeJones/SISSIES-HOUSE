@@ -8,14 +8,21 @@ body {
   padding: 0;
   height: 100vh; /* Ensures the background covers the full height of the viewport */
   color: white; /* Ensures the text color is white for readability */
-  font-family: "Pacifico", sans-serif; /* Uses the Pacifico font globally */
+  font-family: "Sour Gummy", sans-serif; /* Sets the global font to Sour Gummy */
 }
 
-/* Remove background color from h1 and add an ombre effect on the text */
+/* Basic reset for consistent layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for main title */
 h1 {
-  font-family: "Pacifico", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   text-align: center;
-  font-size: 5rem; /* Adjust size as needed */
+  font-size: 7rem; /* Adjust size as needed */
   background: linear-gradient(
     to right,
     #fb6124,
@@ -29,28 +36,37 @@ h1 {
   margin: 0;
 }
 
+/* Main paragraph styling */
 p {
-  font-family: "Pacifico", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   text-align: center;
   font-size: x-large; /* Adjust size as needed */
-  color: rgb(10, 228, 228); /* Ombre effect using gradient */
-  -webkit-background-clip: text; /* Ensures the gradient applies to the text */
-  padding: 20px;
-  margin: 0;
+  color: rgb(27, 232, 232); /* Ombre effect using gradient */
+  padding: 10px 15px;
 }
 
+/* Custom class for Sour Gummy font with flexible settings */
+.sour-gummy {
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Set to a specific weight */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/* Styling for section articles */
 section > article {
-  font-family: "Pacifico", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   text-align: center;
   font-size: x-large; /* Adjust size as needed */
   color: rgb(10, 228, 228);
-  -webkit-background-clip: text; /* Ensures the gradient applies to the text */
-  padding: 20px;
+  padding: 0%;
   margin: 0;
 }
 
+/* Styling for h3 */
 h3 {
-  font-family: "Pacifico", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   text-align: center;
   font-size: x-large; /* Adjust size as needed */
   color: rgb(10, 228, 228); /* Ombre effect using gradient */
@@ -59,21 +75,21 @@ h3 {
   margin: 0;
 }
 
+/* Unordered list styles */
 ul {
   list-style-type: none; /* Removes the dots */
-  padding: 0; /* Optional: Removes default padding */
-  margin: 0; /* Optional: Removes default margin */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
 }
 
 /* Navbar Styles */
 .navbar {
-  background-color: transparent; /* Removes the brown background, makes it transparent */
+  background-color: transparent; /* Makes the navbar background transparent */
   display: flex;
   justify-content: center;
   padding: 10px 0;
 }
 
-/* Navbar Button Styles */
 .navbar .button {
   color: #fff;
   padding: 10px 20px;
@@ -107,9 +123,9 @@ ul {
 }
 
 .programs-grid .program h2 {
-  font-family: "Pacifico", sans-serif;
+  font-family: "Sour Gummy", sans-serif;
   text-align: center;
-  font-size: 2rem; /* Adjust the size as needed */
+  font-size: 2rem; /* Adjust size as needed */
   background: linear-gradient(
     to right,
     #fb6124,
@@ -123,6 +139,7 @@ ul {
   margin: 0;
 }
 
+/* Styling for h2 */
 h2 {
   text-align: center;
   margin-top: 40px;
@@ -131,19 +148,26 @@ h2 {
 /* Get Involved Form Styles */
 form {
   text-align: center;
-  margin: 40px 0;
+  margin: auto;
+  display: inline-flexbox;
+  justify-content: center;
+  justify-content: space-between;
 }
 
 form select,
 form button {
   padding: 10px;
-  margin: 10px 0;
+  margin: auto;
   font-size: 1em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  vertical-align: auto;
 }
 
 /* Footer Styles */
 footer {
-  background-color: transparent; /* Removes the brown background, makes it transparent */
+  background-color: transparent; /* Makes the footer background transparent */
   color: white;
   text-align: center;
   padding: 20px;
@@ -169,11 +193,54 @@ footer p {
   border-radius: 10px; /* Optional: rounds corners */
 }
 
-/* Global Styles */
-body {
-  background-image: url("images/julian-hochgesang-7SV4cz3UFEI-unsplash.jpg");
-  background-size: cover; /* This makes the image cover the entire page */
-  background-repeat: no-repeat; /* Prevents the image from repeating */
-  background-attachment: fixed; /* Makes the background stay fixed when you scroll */
-  background-position: center; /* Centers the image */
+/* Slider container styling for images */
+.slider {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh; /* Makes the slider take the full height of the viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centers images vertically */
+}
+
+/* Track that holds all images */
+.slider-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+  justify-content: center; /* Ensures smooth transition for all images */
+}
+
+/* Individual image items */
+.image-item {
+  flex: 0 0 auto;
+  margin: 0 10px;
+  display: flex;
+  justify-content: center; /* Centers each image inside its container */
+  align-items: center; /* Vertically centers each image */
+}
+
+/* Animation for scrolling effect */
+@keyframes scroll {
+  from {
+    transform: translateX(0); /* Start at the beginning */
+  }
+  to {
+    transform: translateX(-100%); /* Scroll the track of images to the left */
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  nav ul li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 0.9rem;
+  }
 }
