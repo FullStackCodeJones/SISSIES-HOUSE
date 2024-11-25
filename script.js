@@ -1,24 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.querySelector("form");
+  // Image Slider Logic
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".image-item");
+  const totalSlides = slides.length;
 
-  document.querySelector("form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Prevent actual form submission
-    alert("Thank you for getting involved! We will reach out to you soon.");
-    this.reset(); // Clears the form inputs
-  });
+  // Function to show the next slide
+  function showNextSlide() {
+    const track = document.querySelector(".slider-track");
+    currentSlide = (currentSlide + 1) % totalSlides; // Loop back to the first slide
+    track.style.transform = `translateX(-${currentSlide * 100}%)`; // Move slider
+  }
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    if (!name || !email || !message) {
-      alert("Please fill out all fields before submitting.");
-    } else {
-      alert(`Thank you, ${name}! Your message has been received.`);
-      form.reset();
-    }
-  });
+  // Set interval for automatic slide change every 3 seconds
+  setInterval(showNextSlide, 3000); // Change slide every 3 seconds
 });
